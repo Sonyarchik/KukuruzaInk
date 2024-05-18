@@ -1,0 +1,85 @@
+﻿<Window x:Class="KukuruzaInk.OrderPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KukuruzaInk"
+        mc:Ignorable="d"
+        Height="482" Width="667"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFFFF9DB"/>
+                <GradientStop Color="#FFFAD8A8" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label Content="Сумма заказа:" HorizontalAlignment="Left" Margin="462,201,0,0" VerticalAlignment="Top" Foreground="#FFEC8A36" FontSize="18" />
+        <Label x:Name="LabelTotalPrice" Content="0 руб." HorizontalAlignment="Left" Margin="487,235,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" RenderTransformOrigin="0.515,0.72" />
+        <Button x:Name="MakeOrder" Content="Сформировать заказ" HorizontalAlignment="Left" Margin="423,334,0,0" VerticalAlignment="Top" Height="42" Width="205" BorderBrush="{x:Null}" Foreground="White" FontSize="16" Click="MakeOrder_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="#FFEC8A36" CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Rectangle HorizontalAlignment="Left" Height="110" Margin="31,27,0,0" VerticalAlignment="Top" Width="369" Fill="#FFFFFFF5" RadiusX="13.84" RadiusY="13.84"/>
+        <Rectangle HorizontalAlignment="Left" Height="261" Margin="31,163,0,0" VerticalAlignment="Top" Width="369" Fill="#FFFFFFF5" RadiusX="13.84" RadiusY="13.84"/>
+        <Label Content="Заказчик" HorizontalAlignment="Left" Margin="170,30,0,0" VerticalAlignment="Top" Foreground="#FFEC8A36" FontSize="18" />
+        <ComboBox x:Name="ComboboxCustomers" HorizontalAlignment="Left" Margin="49,69,0,0" VerticalAlignment="Top" Width="326" Height="26" Foreground="#FF618C33" Background="{x:Null}" BorderBrush="{x:Null}" >
+            <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="120"/>
+        </ComboBox>
+        <Label Content="Товар" HorizontalAlignment="Left" Margin="178,173,0,0" VerticalAlignment="Top" Foreground="#FFEC8A36" FontSize="18" />
+        <Button x:Name="ButtonNewCustomer" Content="Добавить клиента" HorizontalAlignment="Left" Margin="440,82,0,0" VerticalAlignment="Top" Height="36" Width="166" BorderBrush="{x:Null}" Foreground="White" FontSize="16" Click="ButtonNewCustomer_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="#FADEA7" CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Label Content="Не нашли клиента?" HorizontalAlignment="Left" Margin="440,27,0,0" VerticalAlignment="Top" Foreground="#FFEC8A36" FontSize="18" />
+        <Label Content="Добавьте его!" HorizontalAlignment="Left" Margin="478,50,0,0" VerticalAlignment="Top" Foreground="#FFEC8A36" FontSize="13" />
+        <Button x:Name="ButtonHistory" Content="История заказов" HorizontalAlignment="Left" Margin="443,388,0,0" VerticalAlignment="Top" Height="36" Width="166" BorderBrush="{x:Null}" Foreground="White" FontSize="16" Click="ButtonHistory_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="#FFF1C486" CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <ComboBox x:Name="ComboboxProduct1" HorizontalAlignment="Left" Margin="52,225,0,0" VerticalAlignment="Top" Width="326" Height="26" Foreground="#FF618C33" Background="{x:Null}" BorderBrush="{x:Null}">
+            <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="120"/>
+        </ComboBox>
+        <ComboBox x:Name="ComboboxProduct2" HorizontalAlignment="Left" Margin="52,285,0,0" VerticalAlignment="Top" Width="326" Height="26" Foreground="#FF618C33" Background="{x:Null}" BorderBrush="{x:Null}">
+            <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="120"/>
+        </ComboBox>
+        <ComboBox x:Name="ComboboxProduct3" HorizontalAlignment="Left" Margin="52,342,0,0" VerticalAlignment="Top" Width="326" Height="26" Foreground="#FF618C33" Background="{x:Null}" BorderBrush="{x:Null}">
+            <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="120"/>
+        </ComboBox>
+        <Label Content="Сумма доставки:" HorizontalAlignment="Left" Margin="451,133,0,0" VerticalAlignment="Top" Foreground="#FFEC8A36" FontSize="18" />
+        <Label Content="300 руб." HorizontalAlignment="Left" Margin="487,167,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" />
+        <Button x:Name="ButtonCount" Content="Посчитать" HorizontalAlignment="Left" Margin="470,285,0,0" VerticalAlignment="Top" Height="36" Width="111" BorderBrush="{x:Null}" Foreground="White" FontSize="16" Click="ButtonCount_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="#FFF1C486" CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="ButtonNewRefresh" Content="Обновить данные" HorizontalAlignment="Left" Margin="136,103,0,0" VerticalAlignment="Top" Height="27" Width="160" BorderBrush="{x:Null}" Foreground="White" FontSize="16" Click="ButtonNewRefresh_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="#FADEA7" CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+    </Grid>
+</Window>

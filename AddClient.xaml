@@ -1,0 +1,73 @@
+﻿<Window x:Class="KukuruzaInk.AddClient"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KukuruzaInk"
+        mc:Ignorable="d"
+        Height="500" Width="343"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFFFF9DB"/>
+                <GradientStop Color="#FFFAD8A8" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Rectangle HorizontalAlignment="Center" Height="340" Margin="0,20,0,0" VerticalAlignment="Top" Width="323" Fill="#FFFFFFF5" RadiusX="13.84" RadiusY="13.84"/>
+        <Button x:Name="ButtonChange" Content="Изменить данные клиента" HorizontalAlignment="Center" Margin="0,375,0,0" VerticalAlignment="Top" Height="36" Width="323" BorderBrush="{x:Null}" Foreground="White" FontSize="16" Click="ButtonChange_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="#FFF1C486" CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="Button_AddClient" Content="Добавить клиента" HorizontalAlignment="Center" Margin="0,416,0,0" VerticalAlignment="Top" Height="42" Width="323" BorderBrush="{x:Null}" Foreground="White" FontSize="16" Click="Button_AddClient_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="#FFEC8A36" CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Label Content="Имя клиента" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" Foreground="#FFEC8A36" FontSize="18" />
+        <TextBox x:Name="TextBoxName" HorizontalAlignment="Center" Margin="0,59,0,0" TextWrapping="Wrap" Text="Иванов Иван" VerticalAlignment="Top"  Width="300" Height="30" Background="{x:Null}" SelectionBrush="#FFFFF9DA" SelectionTextBrush="#FFF1C486" Foreground="#FF618C33" TextAlignment="Center">
+            <TextBox.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFFF8D9" Offset="0"/>
+                    <GradientStop Color="#FFFBDFB2" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.BorderBrush>
+        </TextBox>
+        <Label Content="Почта клиента" HorizontalAlignment="Center" Margin="0,96,0,0" VerticalAlignment="Top" Foreground="#FFEC8A36" FontSize="18" />
+        <TextBox x:Name="TextBoxEmail" HorizontalAlignment="Center" Margin="0,135,0,0" TextWrapping="Wrap" Text="ivanovivan@gmail.com" VerticalAlignment="Top"  Width="300" Height="30" Background="{x:Null}" SelectionBrush="#FFFFF9DA" SelectionTextBrush="#FFF1C486" Foreground="#FF618C33" TextAlignment="Center">
+            <TextBox.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFFF8D9" Offset="0"/>
+                    <GradientStop Color="#FFFBDFB2" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.BorderBrush>
+        </TextBox>
+        <Label Content="Номер телефона" HorizontalAlignment="Center" Margin="0,173,0,0" VerticalAlignment="Top" Foreground="#FFEC8A36" FontSize="18" />
+        <TextBox x:Name="TextBoxPhone" HorizontalAlignment="Center" Margin="0,212,0,0" TextWrapping="Wrap" Text="79179999999" VerticalAlignment="Top"  Width="300" Height="30" Background="{x:Null}" SelectionBrush="#FFFFF9DA" SelectionTextBrush="#FFF1C486" Foreground="#FF618C33" TextAlignment="Center">
+            <TextBox.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFFF8D9" Offset="0"/>
+                    <GradientStop Color="#FFFBDFB2" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.BorderBrush>
+        </TextBox>
+        <Label Content="Адрес" HorizontalAlignment="Center" Margin="0,251,0,0" VerticalAlignment="Top" Foreground="#FFEC8A36" FontSize="18" />
+        <TextBox x:Name="TextBoxAdress" HorizontalAlignment="Center" Margin="0,290,0,0" TextWrapping="Wrap" Text="ул. Уличная, д. _ , кв. _" VerticalAlignment="Top"  Width="300" Height="30" Background="{x:Null}" SelectionBrush="#FFFFF9DA" SelectionTextBrush="#FFF1C486" Foreground="#FF618C33" TextAlignment="Center">
+            <TextBox.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFFF8D9" Offset="0"/>
+                    <GradientStop Color="#FFFBDFB2" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.BorderBrush>
+        </TextBox>
+    </Grid>
+</Window>
